@@ -1,0 +1,97 @@
+# 20/05/20
+494. target sum
+977. squares of a sorted array
+718. max length of repeated subarray *
+# 21/05/20
+59. spiral matrix II *
+60. permutation sequence
+# 22/05/20
+15. 3Sum [2 pointers sorted list.  iterate sorted list to length -2 and have l r pointers to check if sum of i+l+r=0, move l if sum < 0 and r if sum > 0, skip repeated for i , l, r]
+18. 4Sum
+# 25/05/20
+687. Longest Univalue Path *
+# 26/05/20
+279. Perfect Squares *
+332. Coin Change
+518.
+# 27/05/20
+922. Sort Array By Parity II [one pass, two pointers, swap]
+74. Search a 2d matrix [binary search]
+560. subarray sum equals k [preSum, hashmap, find k = sum[0:j] - sum[0:i] ]
+# 28/05/20
+1047. Remove all adjacent duplicates in string
+92. Reverse Linked List II ** [create dummy node to mark the head of list,make a pointer pre as a marker for the node before reversing]
+525. Contiguous Array [one pass presum]
+# 29/05/20
+409. Longest Palindrome
+424. Longest repeating character replacement ** [end - start window with dict storing char count in window, window size will always have valid characters]
+849. Maximize distance to closest person
+# 31/05/20
+1305. All elements in two binary search trees
+945. Minimum Increment to make array unique
+# 02/06/20
+378. Kth smallest element in a sorted matrix ** [minheap with (first element in row, index, row)]
+119. Pascal's Triangle II [zip]
+128. Longest Consecutive Sequence [put nums in set and only check num that doesn't have a num-1 in set]
+# 03/06/20
+1302. Deepest leaves sum
+1351. Count negative numbers in a sorted matrix [reduce right most index if negative]
+567. Permutation in string [sliding window]
+222. Count complete Tree Nodes [left, right depth check. if l depth == r depth, l is perfect, r is complete binary tree, only recurse complete tree]
+# 04/06/20
+930. Binary subarrays with sum [presum sliding window]
+355. Design Twitter
+# 05/06/20
+347. Top k Frequent elements [maxheap or bucket sort *review later]
+# 06/06/20
+543. Diameter of binary tree [max depth of left and right subtrees]
+476. Number complement
+1296. Divide Array in Sets of K consecutive numbers [scan small to large and if num has count >0 find if num to num+k has enough count]
+846. Hand of Straights
+653. Two Sum IV
+# 09/06/20
+1184. Distance between bus stops
+145. Post order traversal [** solve iteratively]
+965. Univalued binary tree
+# 10/06/20
+1222. Queens that can attack the king [8 direction with i,j [-1,0,1] loopand k 1-8 loop to cover all positions]
+78. subsets [ iterate nums and add num to each existing subset in result]
+90. subsets II [iterate nums, add num to subsets in cur list if num is the same as prev otherwise use add to subset in results]
+# 11/06/20
+1161. Maximum level sum of a binary tree
+# 15/06/20
+797. All Paths from source target [dfs backtracking]
+209. Minimum size subarray sum [sliding window i, j]
+# 16/06/20
+151. Reverse Words in a String
+1365. How Many Numbers Are Smaller Than the Current Number
+160. Intersection of Two Linked Lists * [when each head becomes empty, set the pointer to other head to counter the len diff, 2nd run will see if intersection exists]
+993. Cousins in Binary Tree [dfs]
+# 17/06/20
+49. Group Anagrams [sorted strs and put in dict]
+881. Boats to Save People [two pointer i j]
+566. Reshape the Matrix
+# 18/06/20
+216. Combination Sum III [dfs backtrack]
+448. Find All Numbers Disappeared in an Array
+240. Search a 2D Matrix II [binary search each row. Or start at right corner, if not target, remove top row or rightmost column]
+# 22/06/20
+207. Course Schedule ** [format to graph and iterate each node, dfs all elements i in each node and if visited[i] == -1 cycle exists, == 1 and it is visited
+# 23/06/20
+678. Valid Parenthesis String * [track the max and min number of open parenthesis at each char where max can't be < 0]
+670. Maximum Swap [ at each digit, if a larger digit occurs later, swap it with the largest digit that occurs furthest from the beginning]
+973. K Closest Points to Origin [min heap of size K, set dist to -, store as tuple in heap]
+1054. Distant Barcodes [set odd position and even position]
+42. Trapping Rain Water [two pointer l r, compute smaller side]
+# 24/06/20
+435. Non-overlapping Intervals * [greedy: always keep interval with smaller end time, remove next interval if next start is smaller than cur end]
+# 25/06/20
+56. Merge Intervals [sort intervals by s and keep largest interval]
+763. Partition Labels [two pointer, track index of last occurrence]
+# 26/06/20
+862. Shortest Subarray with Sum at Least K * [presum with queue, keep popping from queue if cur sum is smaller the last presum]
+1481. Least Number of Unique Integers after K Removals [sort by occurrence of values, priority queue]
+29/06/20
+456. 132 Pattern ** [start from the end, keep a2 elements in stack and keep popping until we get the largest possible a3 value ( where a2 > a3)]
+
+

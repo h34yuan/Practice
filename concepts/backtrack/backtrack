@@ -1,0 +1,40 @@
+# used to find subsets and permutations or traverse paths in matrix
+
+# recursive, dfs
+473. Matchsticks to Square
+526. Beautiful Arrangement
+1376. Time Needed to Inform All Employees
+
+## finding permutations and subsequences
+216. Combination Sum III
+40. Combination Sum II
+46. Permutations
+47. Permutations II
+491. Increasing Subsequences
+386. Lexicographical Numbers
+60. Permutation Sequence
+1593. Split a String Into the Max Number of Unique Substrings
+1079. Letter Tile Possibilities
+
+### recursive dfs stack
+39.r Combination Sum
+
+## dfs grid
+130. Surrounded Regions
+200. Number of Islands
+934. Shortest Bridge
+1219. Path with Maximum Gold
+733. Flood Fill
+827. Making A Large Island
+
+# iteratively, modifying existing elements to add new elements
+78. Subsets
+90. Subsets II
+784. Letter Case Permutation
+1291. Sequential Digits
+
+# iteratively dfs
+565. Array Nesting
+
+# divide and conquer
+395. Longest Substring with At Least K Repeating Characters

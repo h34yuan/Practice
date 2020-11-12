@@ -83,6 +83,45 @@ def dfs_topological(self, graph, visited, i):
     visited[i] = 1
     return True
 
+
+# keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets.
+# finds any overlapping connections in the undirected graph and returns the redundant edge in order to form tree
+def union_find_overlap(edges):
+
+    parent = [0] * len(edges)
+
+    # determine which subset the element x belongs to
+    def find(x):
+        if x != 0:
+            parent[x] = find(parent[x])
+        return parent[x]
+        # if parent[x] == 0:
+        #     return x
+        # return find(parent[x])
+
+    # # iterative find
+    # def find(x):
+    #     while x != parent[x]:
+    #         parent[x] = parent[parent[x]]
+    #         x = parent[x]
+    #     return x
+
+    # joins two subsets into single subset
+    def union(parent, x, y):
+        x_set = find(x)
+        y_set = find(y)
+        # if two nodes result in the same subset (same connected component) edge is redundant as subsets of x and y
+        # the same
+        if x_set == y_set:
+            return False
+        parent[x_set] = y_set
+        return True
+
+    for x, y in edges:
+        if not union(parent, x - 1, y - 1):
+            return [x, y]
+
+
 if __name__ == '__main__':
     matrix = [[0, 1, 0, 0, 1, 1],
               [0, 0, 0, 1, 1, 0],

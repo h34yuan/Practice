@@ -1,0 +1,20 @@
+# find subarrays with a sum/product etc. that is equal to some target t or is the min/max. One pass with 0 initially in prefix,
+ keep a running tot and check prefix for difference every iteration,
+
+# prefix stores the running total as the key and the index or number of occurrences.
+930. Binary Subarrays With Sum
+974. Subarray Sums Divisible by K
+1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target
+523. Continuous Subarray Sum
+152. Maximum Product Subarray
+560. Subarray Sum Equals K
+
+# equal number of values in contiguous subarray
+525. Contiguous Array
+
+# prefix used to find the number of elements to remove from array/list until target is met. prefix stores the index of the last occurring tot {presum tot: last seen index}
+1590. Make Sum Divisible by P
+1171. Remove Zero Sum Consecutive Nodes from Linked List
+
+1031. Maximum Sum of Two Non-Overlapping Subarrays
+862. Shortest Subarray with Sum at Least K

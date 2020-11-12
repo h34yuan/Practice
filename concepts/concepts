@@ -1,6 +1,7 @@
-# one pass prefix with hashmaps used for subarray problems
+# prefix one pass with hashmaps used for subarray problems
 for two pointers i and j, prefix contains calculation of subarray from 0 to i while main loop has the total from subarray
-0 to j where use the difference between [0,j] and [0,i] to find target. initialize prefix with 0:1 for single subarray matching cases
+0 to j where use the difference between [0,j] and [0,i] to find target. initialize prefix with 0:1 for single subarray matching cases.
+prefix[i] calculations will be before jth index
 # reversing linked list problems
 cycle of  (next -> head.next -> prev -> head -> next), set dummy node to mark the head of list where dummy.next = head
 # sliding window
@@ -10,3 +11,16 @@ ex. 797 create helper recursive function, if condition is met at its depth retur
 for current set of values and within the loop the recursive function is called on the next value
 # Greedy
 ****learn more *****
+
+# set operations
+set operations, including union (|), intersection (&), difference (-), symmetric difference (^)
+
+# bisect_left/bisect
+function returns the position in the sorted list, where the number passed in argument can be placed so as to maintain
+the resultant list in sorted order. If the element is already present in the list, the (left/right) most position where element
+has to be inserted is returned. This function takes 4 arguments, list which has to be worked with, number to insert,
+starting position in list to consider, ending position which has to be considered.
+
+# finding the number of subarrays
+consider an array from 1 to n. a subarray is formed from choosing an two indices within the array. E.g. subarray from 1 to n, we will need
+index 1 and n+1 as the left/right index is inclusive/exclusive. then finding total num of subarray is just (n+1) choose 2 -> n(n+1) / 2

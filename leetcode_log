@@ -1,7 +1,8 @@
+[21, 46, 72, 57, 66, 110]
 # 20/05/20
 494. target sum
-977. squares of a sorted array
-718. max length of repeated subarray *
+977. squares of a sorted array [two pointer]
+718. max length of repeated subarray * [dp]
 # 21/05/20
 59. spiral matrix II *
 60. permutation sequence
@@ -13,11 +14,11 @@
 # 26/05/20
 279. Perfect Squares *
 332. Coin Change
-518.
+518. Coin Change 2
 # 27/05/20
 922. Sort Array By Parity II [one pass, two pointers, swap]
 74. Search a 2d matrix [binary search]
-560. subarray sum equals k [preSum, hashmap, find k = sum[0:j] - sum[0:i] ]
+560. subarray sum equals k [presum, hashmap, find k = sum[0:j] - sum[0:i] ]
 # 28/05/20
 1047. Remove all adjacent duplicates in string
 92. Reverse Linked List II ** [create dummy node to mark the head of list,make a pointer pre as a marker for the node before reversing]
@@ -54,7 +55,7 @@
 145. Post order traversal [** solve iteratively]
 965. Univalued binary tree
 # 10/06/20
-1222. Queens that can attack the king [8 direction with i,j [-1,0,1] loopand k 1-8 loop to cover all positions]
+1222. Queens that can attack the king [8 direction with i,j [-1,0,1] loop and k 1-8 loop to cover all positions]
 78. subsets [ iterate nums and add num to each existing subset in result]
 90. subsets II [iterate nums, add num to subsets in cur list if num is the same as prev otherwise use add to subset in results]
 # 11/06/20
@@ -91,7 +92,475 @@
 # 26/06/20
 862. Shortest Subarray with Sum at Least K * [presum with queue, keep popping from queue if cur sum is smaller the last presum]
 1481. Least Number of Unique Integers after K Removals [sort by occurrence of values, priority queue]
-29/06/20
+# 29/06/20
 456. 132 Pattern ** [start from the end, keep a2 elements in stack and keep popping until we get the largest possible a3 value ( where a2 > a3)]
+#04/07/20
+213. House Robber II (keep track of cur max rob and prev max rob)
+669. Trim a Binary Search Tree
+1013. Partition Array Into Three Parts With Equal Sum
+# 05/07/20
+1353. Maximum Number of Events That Can Be Attended (greedy, pick event that ends most soon, use heapq to get event with earliest end [if no events, skip to next available, get all events on cur day and add to hq, remove events that have ended, attend earliest event] )
+692. Top K Frequent Words
+300. Longest Increasing Subsequence ** [store smallest tail of all increasing subsequence]
+1277. Count Square Submatrices with All Ones [num of submatrices in cur cell is the smallest prev calculated cells + 1]
+# 08/07/20
+416. Partition Equal Subset Sum * [knapsack problem, dp keeps track of if combos from 0 to tot/2 exists, sim to coin change]
+680. Valid Palindrome II
+454. 4Sum II [compare AB with CD]
+328. Odd Even Linked List [ odd, even pointers]
+1493. Longest Subarray of 1's After Deleting One Element [sliding window with k to keep track of zeros]
+1004. Max Consecutive Ones III [sliding window]
+39.r Combination Sum [dfs stack]  39 -> 40 -> 77 -> 78 -> 90 -> 216
+# 09/07/20
+40.r Combination Sum II [dfs iterate nums from index to end, skip duplicate nums only if i is past index due to non-unique sol]
+377.r Combination Sum IV [dp 0 to target]
+96.r Unique Binary Search Trees [dp keeps number of combination for n-node bst, idea is to iterate each element as the root where the number of combos is the product of the # of combos in the left and right subtrees]
+95. Unique Binary Search Trees II * [divide and conquer, iterate each num between s and e as the root and recursively compute the list of left and right subtrees]
+# 10/07/20
+309. Best Time to Buy and Sell Stock with Cooldown ** [3 states cylic flow, s0 rest or can buy, s1 can rest or sell, s2 just sold only rest]
+189. Rotate Array
+976. Largest Perimeter Triangle
+124. Binary Tree Maximum Path Sum [dfs compare max sum of left and right subtrees]
+129.r Sum Root to Leaf Numbers [bfs stack]
+# 11/07/20
+926. Flip String to Monotone Increasing [val at i is the first 1 in sequence, count the num of 1s before i and num of 0s after i]
+122.r Best Time to Buy and Sell Stock II [find next local minimum and find next local maximum]
+# 12/07/20
+714. Best Time to Buy and Sell Stock with Transaction Fee [keep track of the max profit of buy and sell before and during cur price where the last transaction of buy/sell must be buying/selling]
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+123. Best Time to Buy and Sell Stock III
+# 13/07/20
+188. Best Time to Buy and Sell Stock IV
+733. Flood Fill [dfs or bfs for 4 directions]
+# 14/07/20
+958. Check Completeness of a Binary Tree [bfs check if total num of nodes match with the index of the last node]
+224. Basic Calculator [split string to int and symbols, iterate from end and use stack to keep track of calculated vals, if open bracket compute local sum until close bracket in stack]
+665. Non-decreasing Array
+# 16/07/20
+227. Basic Calculator II [stack and sign var updated at the end]
+557. Reverse Words in a String III
+# 17/07/20
+304. Range Sum Query 2D - Immutable [dp, pre-compute sum from 0,0 to i,j]
+581. Shortest Unsorted Continuous Subarray
+# 18/07/20
+1143. Longest Common Subsequence [dp max subsequence ending at indices i,j for word1, word2]
+583. Delete Operation for Two Strings [dp max subsequence]
+# 19/07/20
+459. Repeated Substring Pattern *
+1504. Count Submatrices With All Ones ** [compress 2d array to 1d by finding all 1 submatrices from row up to down, compute submatrix count for each h[n] where h[k]==1 means all vals in col k from row up to down are 1s]
+# 20/07/20
+1209. Remove All Adjacent Duplicates in String II [stack with item containing char and count]
+1109. Corporate Flight Bookings [dp cumulative addition, for k in interval i-j, add k to index i and subtract k at index j+1]
+# 21/07/20
+402. Remove K Digits [stack keep popping if cur is smaller than top]
+844. Backspace String Compare
+167.r Two Sum II  - Input array is sorted
+873. Length of Longest Fibonacci Subsequence [2sum of nums before i, dp[n][n] if target found update dp[r][i] = dp[l][r]+1 which is length of longest fibonacci sequence end with A[r], A[i]. Or check a+b in set, update a,b = b, a+b]
+# 22/07/20
+698. Partition to K Equal Sum Subsets ** [dp, dfs empty bucket,with k empty buckets, start from largest num and put in bucket j (0<=j<k) if its <= the allowed bucket sum and then move to the next num and check recursively. after the last num,
+return if all the buckets have the same val and if it doesn't, go back to the previous recursive num and put it in the next bucket j+1]
+684. Redundant Connection * [union find, check if x_set==y_set]
+# 23/07/20
+547. Friend Circles [union find set parent[y_set] = x_set since y will be changing, or dfs]
+876. Middle of the Linked List [slow fast pointer]
+1295. Find Numbers with Even Number of Digits
+542. 01 Matrix [2 iterations, forward check left and top element, set to inf if element != 0 when comparing, then backwards check right and down element]
+# 24/07/20
+516. Longest Palindromic Subsequence [dp nxn dp[i][j] is the longest palindromic subsequence ( vals at i j are equal check dp[i+1][j-1] )between index i to j, dp[0][n] would give largest val]
+462. Minimum Moves to Equal Array Elements II [sum diff between middle and each num]
+453. Minimum Moves to Equal Array Elements
+290. Word Pattern [zip set]
+205. Isomorphic Strings
+# 26/07/20
+915. Partition Array into Disjoint Intervals [local max and max]
+787. Cheapest Flights Within K Stops ** [Dijkstra's algorithm priority queue]
+# 27/07/20
+673. Number of Longest Increasing Subsequence [dps store longest subsequence and count at each index, iterate each i and j from 0-i and compare]
+674. Longest Continuous Increasing Subsequence
+# 28/07/20
+1382. Balance a Binary Search Tree [inorder to get all nodes than binary search list of nodes]
+556. Next Greater Element III [traverse from the right unitl num is smaller than prev i, find the smallest num from i to end, swap with i-1 and sort from i to end]
+# 29/07/20
+155. Min Stack
+473. Matchsticks to Square [dfs similar to partition to k Equal Sum Subset]
+334. Increasing Triplet Subsequence [small big variable]
+# 30/07/20
+740. Delete and Earn [similar to house robbers]
+1022. Sum of Root To Leaf Binary Numbers
+263. Ugly Number [keep dividing by 2,3,5 until 1]
+264. Ugly Number II [3 pointers to keep track of which multiple of 2,3,5 of smallest ugly number]
+# 31/07/20
+202. Happy Number
+712. Minimum ASCII Delete Sum for Two Strings [dp max subsequence store ascii]
+# 02/08/20
+539. Minimum Time Difference [double list but with +24 to time]
+1325. Delete Leaves With a Given Value [dfs]
+# 03/08/20
+648. Replace Words
+# 04/08/20
+884. Uncommon Words from Two Sentences
+1190. Reverse Substrings Between Each Pair of Parentheses
+530. Minimum Absolute Difference in BST [inorder] 
+# 05/08/20
+386. Lexicographical Numbers [dfs 0-9]
+# 06/08/20
+994. Rotting Oranges [bfs]
+134. Gas Station [move start if the tank < 0, keep track to tot cost and gas]
+905. Sort Array By Parity
+1347. Minimum Number of Steps to Make Two Strings Anagram [diff between two counters]
+# 07/08/20
+1029. Two City Scheduling [sum A then find and remove N B's with largest diff between A and B]
+# 08/08/20
+633. Sum of Square Numbers [iterate from 0 to sqrt(c) and check if diff is sqrt]
+# 09/08/20
+951. Flip Equivalent Binary Trees [bfs or dfs recursively check if children nodes are equal if node is equal, check l==l, r==r/ l==r, r==l]
+442. Find All Duplicates in an Array [use list as a dict]
+# 10/08/20
+350. Intersection of Two Arrays II
+55. Jump Game [iterate and find maximal index, or start from end and check if i+nums[i] can get to last]
+# 11/08/20
+814. Binary Tree Pruning [left right recursion]
+1337. The K Weakest Rows in a Matrix
+1315. Sum of Nodes with Even-Valued Grandparent [dfs keeping parent and grandparent node]
+# 12/08/20
+349. Intersection of Two Arrays [set operations]
+470. Implement Rand10() Using Rand7() [check alg concepts file, visualize row/col matrix, rejected sampling]
+1423. Maximum Points You Can Obtain from Cards [sliding window, keep track of window sum and tot res]
+# 13/08/20
+23. Merge k Sorted Lists [heap]
+1219. Path with Maximum Gold [backtracking dfs, set visited as 0 and set it back to val once dfs iteration is done]
+# 14/08/20
+1046. Last Stone Weight
+# 17/08/20
+508. Most Frequent Subtree Sum [dfs left + dfs right + cur node]
+# 18/08/20
+1232. Check If It Is a Straight Line [slope]
+890. Find and Replace Pattern [map char in word index of first occurrence]
+# 19/08/20
+1268. Search Suggestions System * [bisect_left, binary search to find index of first matching subsequence]
+# 20/08/20
+491. Increasing Subsequences [store tuples of increasing sub in set and take union on each num iteration]
+46.r Permutations [dfs backtrack]
+47. Permutations II [backtrack with Counter to check and skip repeats]
+784. Letter Case Permutation [keep appending char to all the strings in res]
+# 21/08/20
+914. X of a Kind in a Deck of Cards [find greatest common denominator > 1 with reduce on all counter values]
+912. Sort an Array
+# 22/08/20
+76. Minimum Window Substring [sliding window, use counter to store needed chars (cam be neg) and keep track of num of char still missing. In the loop, first add the new character to the window. Then, if nothing is missing, remove as much as possible from the window start and then update the result.]
+1094. Car Pooling [list of all stops and add seats at stop[i] for start and remove seats at stop[i] for end, return false if capacity is over]
+# 23/08/20
+709. To Lower Case
+# 24/08/20
+1011. Capacity To Ship Packages Within D Days [binary search to find min sum of the biggest bucket using low=max(A) high=sum(A)]
+875. Koko Eating Bananas [binary search to find min banana/hr within H, low=1, high=max. count is the num of hours to eat all bananas with rate mid]
+1283. Find the Smallest Divisor Given a Threshold [binary search find divisor that give min sum less than threshold, low=1, high= max]
+410. Split Array Largest Sum [same as 1011]
+# 25/08/20
+201. Bitwise AND of Numbers Range * [rightshift m and n by 1 until m and n become the same number and leftshift by the num of rightshift, common bits of m and n from left and right until first different bit]
+486. Predict the Winner * [dp[i][j] saves how much more scores that the first-in-action player will get if the bounds is from i to j than the second player, iterate  by [i+1, j+1] ]
+# 26/08/20
+650. 2 Keys Keyboard [dp from 1 to n, for each i find the largest factor j and check dp[j] + the other factor i/j]
+701. Insert into a Binary Search Tree [insert at end, keep pointers]
+# 27/08/20
+1508. Range Sum of Sorted Subarray Sums [ mod % 1_000_000_007 on final ans]
+141. Linked List Cycle [ slow fast try catch]
+1524. Number of Sub-arrays With Odd Sum [keep track of even and odd sum count ending at each i]
+# 28/08/20
+1498. Number of Subsequences That Satisfy the Given Sum Condition [similar to 2sum, sort, 2 pointer]
+283. Move Zeroes [ 2 pointer, swap leftmost zero with first occurrence of int after]
+# 29/08/20
+771. Jewels and Stones
+1509. Minimum Difference Between Largest and Smallest Value in Three Moves [sort, move pointers at min and max to check diff, compare first 4 nums with last 4 (nums[:4], nums[-4:])
+590. N-ary Tree Postorder Traversal
+# 30/08/20
+1200. Minimum Absolute Difference
+# 31/08/20
+1249. Minimum Remove to Make Valid Parentheses
+962. Maximum Width Ramp [keep decreasing stack of i's ordered by A[i] and iterate A backwards while popping from stack to get diff]
+# 01/09/20
+1299. Replace Elements with Greatest Element on Right Side
+1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit [min and max heap, if diff is larger than limit find the leftmost position between min and max and pop all elements before/equal pos from both heaps]
+# 02/09/20
+869. Reordered Power of 2 [counter and compare with power of 2]
+931. Minimum Falling Path Sum [dp, add smallest value to A[i][j] from A[i-1][k] with |j-k| <= 1]
+# 03/09/20
+1124. Longest Well-Performing Interval **review stack method [score +/- 1, keep track of index of first seen score, then check i - seen[score-1] to valid subarray]
+# 04/09/20
+1288. Remove Covered Intervals [sort by (a[0],-a[1]), keep track of largest right interval]
+792. Number of Matching Subsequences
+# 05/09/20
+923. 3Sum With Multiplicity [iterate counter twice with i,j and find k = target-i-k. add to res for i=j=k, i=j != k, i<j<k cases with binomial coefficient (n choose k)]
+907. Sum of Subarray Minimums *** [https://leetcode.com/problems/sum-of-subarray-minimums/discuss/178876/stack-solution-with-very-detailed-explanation-step-by-step]
+# 09/09/20
+84. Largest Rectangle in Histogram [monotone increasing stack by height, index i/stack[-1] as right/left exclusive bounds of rectangle while height[i] < height[stack[-1]] ]
+1081. Smallest Subsequence of Distinct Characters [keep track of last index, keep increasing stack, if c < stack[-1] and last index is > index at c, pop]
+316. Remove Duplicate Letters [same as 1081]
+85. Maximal Rectangle [apply largest rectangle in histogram for every row treating each row as ground level]
+221.r Maximal Square [use the min value between i-1, j-1 and [i-1][j-1]]
+# 10/09/20
+746. Min Cost Climbing Stairs [dp, add the min between i-1, i-2 to i]
+940. Distinct Subsequences II [create end[26] that counts the num of subseq ending with ith character. iterate c in s and add the sum of end + 1 to end[c] (adding c to each subseq in end)]
+83.r Remove Duplicates from Sorted List [cur pointer]
+82. Remove Duplicates from Sorted List II [dummy node before head, use pre and cur pointers, check cur and cur.next, pre.next will go to the next unique node]
+# 11/09/20
+332. Reconstruct Itinerary [dfs, defaultdict to store sorted dest, use stack to go dfs by keep adding to stack when dest exists for start]
+130. Surrounded Regions [dfs helper to set  O to 1 and recurse surrounding 4-directions, apply dfs along edges and change all O's to X's 1's to O's]
+200.r Number of Islands [similar to 130 dfs whenever grid[i][j] == 1]
+988. Smallest String Starting From Leaf [dfs add val to string and compare at dfs end]
+# 14/09/20
+659. Split Array into Consecutive Subsequences [hashmap of nums and num of subseq at i, iterate and continue if i-1 subsequence exists or i+1, i+2 exists]
+1014. Best Sightseeing Pair [update max cur if A[i] is larger or the difference between indices is larger than diff between values / cur is max between (cur, A[i]) -1 where -1 accounts for one index further]
+# 15/09/20
+1027. Longest Arithmetic Subsequence [dp hashmap key store [index of end subseq][diff]. iterate i and j=i+1 and update dp[j][diff] by checking dp[i][diff] for the same diff subseq count ending at i]
+187. Repeated DNA Sequences [two sets]
+836. Rectangle Overlap [for each dimension check if bottomleft  < topright ]
+223. Rectangle Area [calc area of both, if overlap, for each dim take the max lengths and subtract not intersecting parts and subtract from total area]
+# 17/09/20
+31. Next Permutation ** [from end find the first pos where nums[i-1] < nums[i], k = i-1 is the closest ascending pos left of i and swap k and j when nums[j] > nums[k] for j starting from the end and reverse the values between k+1 to end]
+1290. Convert Binary Number in a Linked List to Integer
+1514. Path with Maximum Probability [bfs Bellamn Ford. store edges as a graph in a defaultdict, keep list of max prob at each node, store cur node in q and new prob prob[cur] * prob is greater update prob[node] and add node to q]
+# 19/09/20
+406. Queue Reconstruction by Height [sort by descending height and ascending k, iterate list and insert each element at position k]
+739. Daily Temperatures [monotone decreasing stack. iterate temp i , update res[stack[-1]] if T[i] > T[stack[-1]] and add i to stack after. stack stores all temps before i where no next temp have been found yet]
+1338. Reduce Array Size to The Half [num count into heap and pop until <= n//2]
+# 20/09/20
+1009. Complement of Base 10 Integer
+154. Find Minimum in Rotated Sorted Array II [binary search, or find min in set]
+1492. The kth Factor of n
+# 21/09/20
+941. Valid Mountain Array [climb from both sides]
+1171. Remove Zero Sum Consecutive Nodes from Linked List [presum with dummy node, first loop store presum in dict, second loop get last occurrence of cur sum from dict and jump to next node]
+# 22/09/20
+888. Fair Candy Swap [find dif required to get to same sum and check if b+dif is in set a]
+513. Find Bottom Left Tree Value [bfs right to left]
+1539. Kth Missing Positive Number 
+# 23/09/20
+1491. Average Salary Excluding the Minimum and Maximum Salary
+1557. Minimum Number of Vertices to Reach All Nodes [return nodes with no prev and take set difference]
+526. Beautiful Arrangement [backtrack, start at i=N and iterate available nums in set, if condition met, recurse for i-1 and remove seen element from set and stop when i == 1]
+# 24/09/20
+1512. Number of Good Pairs
+1405. Longest Happy String [max heap to store count and char. if last two res is same as popped char, pop next largest and append, push char back with 1 less count]
+239. Sliding Window Maximum [monotone decreasing queue. first element in q is largest val in window. when iterating nums and the diff at i-q[0] >= k, popleft to move window]
+934. Shortest Bridge [dfs, bfs. dfs to mark all points of the first island as a diff val and store the points in list. bfs the first island points and add 1 for each breadth and return val when 1 (second island) is encountered]
+# 25/09/20
+1155. Number of Dice Rolls With Target Sum * [dp [dice+1][target+1] (can reduce to 1d). iterate each die, for each tot j from 1 to target, iterate each face k and sum all the vals from dice i-1 with a positive diff j-k between the face and target dp[i-1][j-k]]
+357. Count Numbers with Unique Digits * [math. leftmost at 1 we have 9 choices 1-9, then for each 0 after the 1, have 9 choices (0-9 excluding 1) and decrease by 1 each time and then add 10 choices to tot at the end for (0-9 vals)]
+413. Arithmetic Slices [dp, iterate list i and store num of valid subseq before i as cur, add 1 to cur if valid subseq at i and add cur to res. Alt: use num of continuous subarray in a array is n(n+1)/2 and subtract subseq of size < 3]
+# 27/09/20
+652. Find Duplicate Subtrees [postorder dfs, store path as serial string in dict and add to res if path exists once already. serialization is preorder]
+297. Serialize and Deserialize Binary Tree [dfs, same serialize from 652. deserialize use preorder dfs and iter next]
+# 28/09/20
+1342. Number of Steps to Reduce a Number to Zero [for num in binary count all 1s as 2 steps 0s as 1 except for first 1]
+646. Maximum Length of Pair Chain [dp, for pair i,j store max chain count ending at j in dict and check the max chain smaller than i for each i]
+688. Knight Probability in Chessboard * [dp. keep track of 2 dp. For dp_prev, keep track of prev probability to get to the valid squares. dp_new[i][j] checks if each of the 8 prev squares are valid to add the prev prob from dp_prev * 1/8 and set as dp_prev at the end. sum of dp_new will give tot prob]
+832. Flipping an Image
+# 29/09/20
+278. First Bad Version [binary search, i + (j-i) // 2 equiv to (i+j) // 2]
+45. Jump Game II [l,r pointers, where r is the furthest possible distance with the available jumps. For each iteration find the max available jump between l and r and set the new l as the prev r+1 and new r as the next max]
+1525. Number of Good Ways to Split a String [set and dict]
+1005. Maximize Sum Of Array After K Negations [heap]
+# 30/09/20
+916. Word Subsets [keep max count of each char between each b in B. Create counter for each a in A and if b-a is empty add to res since all chars in B are used]
+1528. Shuffle String
+53.r Maximum Subarray [kadane's algorithm, dp[i] is the max subarray sum ending at i found by dp[i]=max(dp[i-1],0) + nums[i]]
+152.r Maximum Product Subarray [2 pass from start and end. find prefix product from each end so far at i while keeping track of max]
+918. Maximum Sum Circular Subarray [kadane's algorithm similar to 53. but also keep track of smallest minimum subarray where tot-min_sum will be max if max_sum is at the head and tail]
+# 01/10/20
+735. Asteroid Collision [stack to keep track of remaining asteroids]
+367. Valid Perfect Square [binary search or newtons method with guess x = (x+num/x) // 2]
+429. N-ary Tree Level Order Traversal [bfs]
+1593. Split a String Into the Max Number of Unique Substrings * [backtrack, in backtrack iterate the len of string and check if substring till i is not in seen then add to seen and recurse with substring from i to end. remove from seen at the end of each loop]
+# 02/10/20
+1550. Three Consecutive Odds
+# 03/10/20
+168. Excel Sheet Column Title [start from smallest to largest ((n-1) % 26)]
+1324. Print Words Vertically [zip and rstrip]
+36. Valid Sudoku [keep track of repeated val in row, col, square with dict]
+# 04/10/20
+801. Minimum Swaps To Make Sequences Increasing ** [dp, keep track of swap and not_swap count ending at i. update dp when A[i-1] < A[i] and B[i-1] < B[i] and A[i-1] < B[i] and B[i-1] < A[i]]
+974. Subarray Sums Divisible by K [presum one-pass, presum stores tot % K]
+# 05/10/20
+1590. Make Sum Divisible by P [presum, store the last index of the sum as the value. find the remainder of the total sum % p. if (cur-need) % p is in presum, get the diff in indices]
+738. Monotone Increasing Digits [greedy. convert to reverse nums list. find the inverse index where the num[inv] will decrease by 1 and all num after it will be set to 9. inv index is when it is not monotone or with repeated num[inv]]
+983. Minimum Cost For Tickets [dp, keeps track of the min total cost of travel to day i. get min cost at i from checking i-1, i-7, i-30 days plus the respective costs]
+978. Longest Turbulent Subarray [dp store diff between i and i-1 and count consecutive negative products of consecutive indices]
+# 06/10/20
+877. Stone Game [dp same as 486. iterate pile with i and iterate j to go from [i, 0], dp[j] represents max amount where the leftbound is at j and rightbound at i-1 at each new i]
+1025. Divisor Game [return n% 2== 0]
+1039. Minimum Score Triangulation of Polygon ** [dp bottom up. dp[i][j] is the min score of (j-i)-2 triangles formed between edges i and j. iterate i, j by increasing interval size (go over all j-i = 2 intervals then to j-i = 3 ...). between each i,j k iterates all the nodes in between and adds the subtriangles from dp[i][k] and dp[k][j]]
+312. Burst Balloons [dp same approach as 1039. but add [1] before and after nums. iterate i,j by increasing interval, and for k check all elements inbetween i,j]
+# 07/10/20
+752. Open the Lock * [bfs, for each combo in q, it will add 8 new combos (+- 1 to each digit, use mod 10 to deal with circular path of digits) to the next iteration, if combo seen, continue]
+127. Word Ladder [bfs, for each char in word, try all cases from a-z and if it exists in wordList add to q]
+91. Decode Ways [dp bottom up. dp[i] is the count from 0 to i. if 0 < s[i] (last) < 10 add dp[i-1], if 10 <= s[i-1:i+1] (last two) <= 26 add dp[i-2]]
+394.r Decode String [stack, keep track of cur_str and cur_num. append both to stack when c == '[', if c == ']' pop the num and prev_str and update the cur_str]
+690. Employee Importance [bfs and dict]
+938. Range Sum of BST [dfs recursion]
+953. Verifying an Alien Dictionary [create mapping, and apply to each char for each word, zip(words, words[1:]) and check that all w1 <= w2]
+1414. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K [create fib list up to k. while k > 0 iterate through fib list from largest and subtract from k, valid as long as k >= 0]
+# 08/10/20
+1376. Time Needed to Inform All Employees [dfs, use dict to store all subordinates]
+1233. Remove Sub-Folders from the Filesystem [sort by lex and iterate folders and add to res if f does not start with the last element in res. Or sort by length, iterate folder, when f[i] == '/' and f[:i] has been seen, then it must be a subfolder. else, add folder to seen. ]
+238. Product of Array Except Self [2 pass from start and end. On each pass output[i] is the product of all nums p before/after i. similar to 152.]
+693. Binary Number with Alternating Bits [zip bin vals]
+# 09/10/20
+1043. Partition Array for Maximum Sum [dp, dp[i] is the max sum from 0-i, for each dp[i] try to change k last numbers (from i to i-k) separately with the cur max by dp[i-k] + cur_max * k]
+1314. Matrix Block Sum * [dp rangeSum. dp[i][j] stores the total sum block from 0,0 to i,j by dp[i][j] = dp[i-1][j] + dp[i][j-1] - dp[i-1][j-1] + mat[i][j]. iterate each element, find the up left (i-k, j-k) and bottom right (i+k+1, j+k+1) bounds and find for res[i][j] = dp[r2][c2] + dp[r1][c1] - dp[r2][c1] - dp[r1][c2]]
+# 10/10/20
+997. Find the Town Judge [graph, from trust = [a,b], count[i] + 1 if b==i and -1 if a==i. iterate N and return i if the count = N-1 (all people in town trusting i except for i)]
+# 11/10/20
+1582. Special Positions in a Binary Matrix
+# 12/10/20
+939. Minimum Area Rectangle [two loops over points, add point to seen on outer loop. for each pair (bottom left and top right) of points, check if diagonal points are in seen and find area]
+1079. Letter Tile Possibilities [backtrack, counter for avail chars and seen to keep total num of combinations]
+380. Insert Delete GetRandom O(1) [dict to store val and idx, list nums to store vals in set. For insert, keep track of the pos of val in num. for remove, get the pos idx of val and set the last val in nums at idx and pop the last and in the dict. random int from 0 to size]
+381. Insert Delete GetRandom O(1) - Duplicates allowed [similar to 380 but store pos in a defaultdict(list). check to make sure last != val before updating pos of last at pos[last][-1], sort pos[last]]
+696. Count Binary Substrings [group same values into chunks and take min between chunks]
+1309. Decrypt String from Alphabet to Integer Mapping [if c == #, pop last 2 elements into one]
+1128. Number of Equivalent Domino Pairs [use dict to store pair and occurrence]
+643. Maximum Average Subarray I [sliding window]
+780. Reaching Points * [visualize tree path from start to target. start from target and take the modulus between each other (tx, ty) until one is <= to the start points. check if smaller target point is equal to its respective start and check if the diff between the target and start of the second point mod the first is 0]
+# 13/10/20
+880. Decoded String at Index * [find the index of char that will give tape length >= k. starting from the index to 0, if s[j] is digit, divide count by s[j] and take k mod count. if its alpha check if k==count or K ==0 and return s[j]]
+990. Satisfiability of Equality Equations [union find, find the disjoint subsets for all '==' equations, then iterate '!=' and check if the find(x) == find(y). if the finds are the same return False]
+1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
+721. Accounts Merge * [union find. for each account, apply union find on the first email and all the rest and use dict to store email with name. iteraete parent and put all emails in same subset in defaultdict. itereate defaultdict, get name and return list]
+# 14/10/20
+967. Numbers With Same Consecutive Differences [bfs. iterate from 1-9 and use bfs to add valid element till size n]
+86. Partition List [linkedlist, two lists pointers for < x and else]
+1122. Relative Sort Array [Counter to count vals in arr1, iterate arr2 for order and append remains]
+139.r Word Break [dp, keep track if string at i is valid by iterating j from 0 to i and see if s[j:i] is in list and dp[j] is valid]
+140. Word Break II  * [dp dfs, memo[s] stores all the combo of s. for dfs, if s in memo, return memo[s]. iterate wordDict, if s starts with word apply dfs to the strings after word to get list of subwords. append word to each subword and update memo[s] and return res]
+728. Self Dividing Numbers
+725. Split Linked List in Parts [linkedlist. find num of nodes, find the num of nodes at each index and see if num + 1 is needed by checking if i < num % k. keep track of start, end of each interval and set head to end.next and end.next = None each time]
+# 15/10/20
+1189. Maximum Number of Balloons [counter, check chars]
+1286. Iterator for Combination ** [bit masking, use a binary string of the same length as characters where 1 at i represents character[i]. check the bin string from 0 to '1' * n and check if the number of 1s is equal to the combinationLength and check the indices at characters to get the chars]
+445. Add Two Numbers II [stack, linkedlist. use stack to start from end of lists, loop over s1 and s2 at the same time and add to sum if each node exists]
+921. Minimum Add to Make Parentheses Valid [stack, count remaining items]
+594. Longest Harmonious Subsequence [Counter count nums, for every pair of keys in dict with diff 1, get the total count of both nums]
+1446. Consecutive Characters
+# 16/10/20
+821. Shortest Distance to a Character [dp, at each index of S in res, set 0 for S[i]== C else n. iterate from front/back and take the min of res[i] and res[i-/+1] + 1]
+368. Largest Divisible Subset [dp,sort nums, dp[i] stores all the largest divisble subset up to i. for each num at nums[i] iterate all indices before nums[j] and get dp[nums[j]]+1 if nums[i] % nums[j] == 0 and has a larger subset]
+# 17/10/20
+1502. Can Make Arithmetic Progression From Sequence
+109. Convert Sorted List to Binary Search Tree [dfs, slow fast to find the mid node and split it to left and right set by setting the next of the last left to None. dfs recurse for the left set and right set to set next level of bst]
+1262. Greatest Sum Divisible by Three [dp, keep track of the max val with remainder 0,1,2 seen. iterate nums, add num to each seen value i and update seen[(num+i) % 3] with the max possible value]
+1300. Sum of Mutated Array Closest to Target [binary search l=1, r=max(nums)]
+# 18/10/20
+807. Max Increase to Keep City Skyline [find max at each row and col. for each i,j take the min between the two max and subtract from cur element]
+1002. Find Common Characters [count char of first element, take & of counter between common and word. Or create temp dict at each iteration and only keep common chars]
+61. Rotate List [linkedlist, iterate until last node and count total n. set last.next to head to form a cyclic list. find the number of moves (n - (k%n) - 1) and iterate temp pointer from head to the spot and  set the res to temp.next while setting temp.next to None]
+856. Score of Parentheses [stack to store cur scores. if '(', push cur in stack and reset to 0. else add popped val to cur and the max(cur, 1)]
+# 19/10/20
+1513. Number of Substrings With Only 1s [split by 0 and find num of subarray for each group of 1's with (n+1) choose 2]
+1202. Smallest String With Swaps [union find. apply union find to all pairs. group the chars in s by parent and sort each group in descending order. iterate len(s) set the s at index i as group[find(i)].pop()]
+1380. Lucky Numbers in a Matrix [set insersection. find cols by using zip(*matrix)]
+1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target [dp presum stores the max num of non overlapping targets up to the corresponding index]
+1567. Maximum Length of Subarray With Positive Product [dp, 2 array pos/neg storing max pos/neg count ending at i inclusive. for setting the pos[i] and neg[i] cases when checking neg[i-1], value at i would be 0 if neg[i-1] == 0]
+# 20/10/20
+1186. Maximum Subarray Sum with One Deletion [dp similar to 53. 2 dp to keep track of max so far with 0 and 1 removals. for 1 removal dp, also check for dp[i-2] + num[i] ]
+1266. Minimum Time Visiting All Points [add max diff between points]
+# 21/10/20
+241. Different Ways to Add Parentheses * [dfs dp memo divide and conquer. dfs iterates input, if c is +,-,* split the input at that pos and recurse to find all possible sub solutions. memo[input] stores all valid solutions of that input]
+896. Monotonic Array [return not (is_pos and is_neg)]
+1464. Maximum Product of Two Elements in an Array
+1291. Sequential Digits [queue, initial from 1-9 and put back in with next sequential num as long as next num is valid]
+# 22/10/20
+795. Number of Subarrays with Bounded Maximum [keep start and last index to keep track of len of valid single max, if A[i] > R, reset index. If A[i] >= L update last to i. Always add last-start for every index]
+706. Design HashMap
+1038. Binary Search Tree to Greater Sum Tree [reverse inorder traversal. have global var to keep track of sum of larger vals]
+538. Convert BST to Greater Tree [same as 1038]
+501. Find Mode in Binary Search Tree
+783. Minimum Distance Between BST Nodes [same as 530. inorder traversal]
+# 23/10/20
+116. Populating Next Right Pointers in Each Node [bfs]
+1089. Duplicate Zeros
+# 25/10/20
+961. N-Repeated Element in Size 2N Array
+1031. Maximum Sum of Two Non-Overlapping Subarrays [use presum to calculate subarray. keep track of Lmax/Mmax which is the max sum of length L/M before the last M/L element before index i. e.g. Lmax = max(Lmax, A[i - M] - A[i - L - M])]
+# 26/10/20
+1267. Count Servers that Communicate [2 pass. count total in each row and col and add to res if either is > 1]
+1160. Find Words That Can Be Formed by Characters
+1008. Construct Binary Search Tree from Preorder Traversal * [bst binary search. start binary search at i, j = 0, len(A). set cur node val as A[i] and find the mid point (which determines the index to split left and right) with bisect(A, A[i], i+1, j). recurse root.left and root.right]
+827. Making A Large Island [dfs to find and store the area of each island and mark the islands distinctively. iterate grid and for grid[i][j] == 0, change to 1 and add the distinct surrounding island areas and check for max]
+258. Add Digits
+# 27/10/20
+395. Longest Substring with At Least K Repeating Characters ** [divide and conquer recurse split by infrequent char. Iterate char set, for the first occurrence of count of char is less than k, split the string by c and recurse each substrings. if all chars are >= k, return len(s)]
+1574. Shortest Subarray to be Removed to Make Array Sorted ** [two pointer l, r. l is the last index of increasing arr from 0 to l and r is first index of inc arr from r to n. while loop with i from 0 to l and j from r to n, if arr[i] <= arr[r], compare res and increase i, else increase j. res composed of either prefix, suffix or both]
+724. Find Pivot Index
+523. Continuous Subarray Sum [presum. presum dict keeps track of first occurrence of cur % k. check edge case for k=0]
+# 28/10/20
+1417. Reformat The String
+1472. Design Browser History
+1276. Number of Burgers with No Waste of Ingredients [linear equation]
+467. Unique Substrings in Wraparound String [dp. store max consecutive length ending at char c. add to length if ord between chars % 26 == 1 and return summed values in dict]
+# 29/10/20
+565. Array Nesting [dfs, iterate each num and dfs for num not in seen]
+1615. Maximal Network Rank [dict store paths]
+1372. Longest ZigZag Path in a Binary Tree [bfs keep track of direction and count or dfs keep track of max l,r, res]
+845. Longest Mountain in Array [two pointer, keep track of status of up and down. only get res if both up and down are seen. if cur step is invalid, move j+= 1 and i = j. dp two pass up down from each side. up/down stores longest inc/dec ending at index i]
+# 30/10/20
+1573. Number of Ways to Split a String [one pass. find the indices of all the ones. check edge cases for tot num of ones being 0 or not divisible by 3. find the target of each interval with tot / 3 and group the indices in ones by target size and find the difference in the last and first index of each set of adjacent intervals and take the product]
+1552. Magnetic Force Between Two Balls * [binary search, sort list. helper function to count the num of balls in pos for a min distance d. apply binary search, if count(mid) >= m, l = mid else r = mid-1]
+1486. XOR Operation in an Array
+# 31/10/20
+204. Count Primes * [dp, create list prime of size n where prime[i=0, 1] = 0 and 1 for else. iterate each i from 2 to sqrt of n, if i is prime (haven't been encountered from prev), check all j from i*i to n increment by i and set to 0]
+# 01/11/20
+396. Rotate Function [math, for every f(k+1) = sum(A) - A[n-i-1] * n (last element of prev rotate) where every element except for the last is added while all of last is removed]
+1052. Grumpy Bookstore Owner [sliding window, keep track of non grumpy and original grumpy window]
+# 02/11/20
+1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold [sliding window]
+1035. Uncrossed Lines [dp matrix[m][n]. dp[i][j] stores the max uncrossed lines in subarrays A[0:i] and B[0:j]. for A[i] != B[j], take the max(dp[i-1][j], A[i]==B[j]+dp[i-1][j-1], dp[i][j-1]]
+# 03/11/20
+1608. Special Array With X Elements Greater Than or Equal X
+# 04/11/20
+1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts [sort both arrays and take the prod of the max width and height]
+1572. Matrix Diagonal Sum [one pass, iterate i]
+1619. Mean of Array After Removing Some Elements [sort and take sum of elements inbetween range]
+# 05/11/20
+825. Friends Of Appropriate Ages [2 dp of size 121 to store num of people at each age and the total sum so far at age i. iterate from 15 (invalid for age <15) to 121 and for any i > 0, take the count with the diff in sum with 1st condition and add count *num[i] - num[i] to res]
+747. Largest Number At Least Twice of Others
+80. Remove Duplicates from Sorted Array II [check and compare with last two items]
+1208. Get Equal Substrings Within Budget [sliding window, iterate the ascii diff of s and t and keep track of cur cost]
+106. Construct Binary Tree from Inorder and Postorder Traversal [dfs (l,r), pop the last in postorder to get cur, find index of the popped val in inorder and split it to right and left and recurse the right subtree then left subtree with the split parts]
+219. Contains Duplicate II [dict keep last index]
+# 06/11/20
+689. Maximum Sum of 3 Non-Overlapping Subarrays ** [2 dp, presum. iterate from each end for the left and right dp. left/right[i] stores the starting index of the max k subarray ending/starting at i. get the middle intervals by iterating i (starting index of middle interval) from k to n-2*k+1 and check for max with left[i-1], right[i+k]]
+989. Add to Array-Form of Integer
+1329. Sort the Matrix Diagonally [dict, store the upper and lower diags sorted in dict and update the matrix with sorted values]
+# 07/11/20
+1431. Kids With the Greatest Number of Candies
+766. Toeplitz Matrix [array, check iterate m-1, n-1 and compare i, j with the i+1, j+1 element]
+# 08/11/20
+1497. Check If Array Pairs Are Divisible by k [dict to store the mods of each num, return false if k-i%k is not in dict]
+621. Task Scheduler TODO [look at problem again]
+# 09/11/20
+1470. Shuffle the Array
+950. Reveal Cards In Increasing Order [use queue to simulate process of final sorted nums. iterate the sorted nums x, use q to keep track of the pos in res for each x. on each iteration, take top:res[q.pop(0)] = x, put to bottom: q.append(q.pop(0)]
+1375. Bulb Switcher III [array, keep track of rightmost bulb and add to res if it equals to the tot num of lightbulbs so far]
+870. Advantage Shuffle [greedy, sort A and iterate B from big to small, use defaultdict to store all b elements with the largest available A bigger than b where A[-1] > b. res iterates b and set the val by popping b from defaultdict if exists, else get from remaining A]
+1331. Rank Transform of an Array [store position in hashmap]
+# 10/11/20
+1395. Count Number of Teams [array, iterate from 1 to n-1. at each position i, count the number of values less and greater than rating[i] left and right of i where res = llc*rgc + lgc*rlc]
+1352. Product of the Last K Numbers [design, prefix product, initialize nums with [1], whenever add 0 reset to [1]. return 0 prod if len(nums) <= k otherwise take the preproduct diff]
+1424. Diagonal Traverse II [dict, elements in the same diag have the same i+j sum. iterate each element for each row and group by i+j in dict and output the values in dict in reverse from smallest to largest sum key]
+# 11/11/20
+1346. Check If N and Its Double Exist [store seen in set]
+1366. Rank Teams by Votes ** [dict, sort by list. store all available chars in dict with [0]*(num of chars for each vote) + [c] as value ([c] is used for alphabetic ordering for same votes chars). iterate each c in each vote, and count[c][i]-=1 at the ith position for the char. return sorted of votes[0] sorted by the values of dict]
+628. Maximum Product of Three Numbers [heap, nlargest/nsmallest. or keep track of 3 max and 2 min vars]
+1304. Find N Unique Integers Sum up to Zero
+# 12/11/20
+1394. Find Lucky Integer in an Array
+1007. Minimum Domino Rotations For Equal Row [use Counter to count occurrence of each val in A and B and keep track of the num of same vals at index i. iterate 1-6 and a_count[x]+b_count[x]+same[x] > len(A) return the min diff between A and B]
+891. Sum of Subsequence Widths * [math, sort array, for each A[i], it is larger/smaller than i/n-1-i elements so A[i] is the max/min a total of 2^i/2^n-1-i times. return the sum of the diff between the max - min occurrences for each num]
+1636. Sort Array by Increasing Frequency [ counter, sort with lambda or heap ordering with (count(x), -x)]
+
+
+
+
 
 

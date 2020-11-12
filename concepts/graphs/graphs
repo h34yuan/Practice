@@ -1,0 +1,23 @@
+# dfs
+332. Reconstruct Itinerary
+797. All Paths from source target
+
+# bfs [iterate all current level vals first]
+997. Find the Town Judge
+1615. Maximal Network Rank
+
+##bellman-ford
+1514. Path with Maximum Probability
+
+## topological
+207. Course Schedule
+
+# union find
+684. Redundant Connection
+547. Friend Circles
+990. Satisfiability of Equality Equations
+721. Accounts Merge
+1202. Smallest String With Swaps
+
+# set operation
+1557. Minimum Number of Vertices to Reach All Nodes

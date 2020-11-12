@@ -1,0 +1,73 @@
+# generic array/matrix traversal
+59. Spiral Matrix II
+849. Maximize Distance to Closest Person
+945. Minimum Increment to Make Array Unique
+119. Pascal's Triangle II
+1296. Divide Array in Sets of K Consecutive Numbers
+846. Hand of Straights
+1184. Distance Between Bus Stops
+566. Reshape the Matrix
+448. Find All Numbers Disappeared in an Array
+1013. Partition Array Into Three Parts With Equal Sum
+189. Rotate Array
+665. Non-decreasing Array
+581. Shortest Unsorted Continuous Subarray
+915. Partition Array into Disjoint Intervals
+334. Increasing Triplet Subsequence
+905. Sort Array By Parity
+442. Find All Duplicates in an Array
+1299. Replace Elements with Greatest Element on Right Side
+1014. Best Sightseeing Pair
+1491. Average Salary Excluding the Minimum and Maximum Salary
+832. Flipping an Image
+1593. Split a String Into the Max Number of Unique Substrings
+1582. Special Positions in a Binary Matrix
+807. Max Increase to Keep City Skyline
+896. Monotonic Array
+1464. Maximum Product of Two Elements in an Array
+1089. Duplicate Zeros
+1267. Count Servers that Communicate
+
+# iterate from both ends, 2 pass
+941. Valid Mountain Array
+238. Product of Array Except Self
+
+# sort array with condition
+1509. Minimum Difference Between Largest and Smallest Value in Three Moves
+1200. Minimum Absolute Difference
+1288. Remove Covered Intervals
+406. Queue Reconstruction by Height
+1233. Remove Sub-Folders from the Filesystem
+1502. Can Make Arithmetic Progression From Sequence
+
+# greedy [for each iteration, try to get the largest/smallest val available]
+435. Non-overlapping Intervals
+134. Gas Station
+1029. Two City Scheduling
+55. Jump Game
+1094. Car Pooling
+738. Monotone Increasing Digits
+1414. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K
+
+# iterate array and use dict or set to store seen values or some constraint [related to hashmap question set]
+1222. Queens That Can Attack the King
+670. Maximum Swap
+792. Number of Matching Subsequences
+888. Fair Candy Swap
+1539. Kth Missing Positive Number
+1122. Relative Sort Array
+1380. Lucky Numbers in a Matrix
+
+# bfs [not necessarily array as input] on arrays, matrices, integers
+542. 01 Matrix
+994. Rotting Oranges
+752. Open the Lock
+127. Word Ladder
+690. Employee Importance
+967. Numbers With Same Consecutive Differences
+
+# append additional elements to list
+539. Minimum Time Difference
+
+# merge
+56. Merge Intervals

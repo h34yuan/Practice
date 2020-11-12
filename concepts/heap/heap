@@ -1,0 +1,26 @@
+
+1046. Last Stone Weight
+912. Sort an Array
+1508. Range Sum of Sorted Subarray Sums
+1005. Maximize Sum Of Array After K Negations
+
+# greedy
+1353. Maximum Number of Events That Can Be Attended
+1338. Reduce Array Size to The Half
+1405. Longest Happy String
+
+# top k elements
+1481. Least Number of Unique Integers after K Removals
+378. Kth Smallest Element in a Sorted Matrix
+347. Top k Frequent elements
+973. K Closest Points to Origin
+692. Top K Frequent Words
+
+# Dijkstra
+787. Cheapest Flights Within K Stops
+
+# k-way merge
+23. Merge k Sorted Lists
+
+# two heap
+1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit

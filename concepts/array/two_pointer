@@ -1,0 +1,19 @@
+# two pointer is when two points itereate through the data structure in tandem until one or both pointer conditions is met
+# used to find a set of 2 or more subarray elements with some constraint at reduced runtime.
+977. Squares of a Sorted Array
+15. 3Sum
+18. 4Sum
+922. Sort Array By Parity II
+881. Boats to Save People
+42. Trapping Rain Water
+763. Partition Labels
+328. Odd Even Linked List
+167. Two Sum II - Input array is sorted
+1498. Number of Subsequences That Satisfy the Given Sum Condition
+283. Move Zeroes
+923. 3Sum With Multiplicity
+31. Next Permutation
+45. Jump Game II
+795. Number of Subarrays with Bounded Maximum
+1574. Shortest Subarray to be Removed to Make Array Sorted
+724. Find Pivot Index

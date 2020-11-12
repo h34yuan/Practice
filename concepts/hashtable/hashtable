@@ -1,0 +1,40 @@
+# dictionary
+409. Longest Palindrome
+128. Longest Consecutive Sequence
+1365. How Many Numbers Are Smaller Than the Current Number
+49. Group Anagrams
+454. 4Sum II
+648. Replace Words
+884. Uncommon Words from Two Sentences
+890. Find and Replace Pattern
+1. Two Sum
+771. Jewels and Stones
+1512. Number of Good Pairs
+1525. Number of Good Ways to Split a String
+1528. Shuffle String
+953. Verifying an Alien Dictionary
+1128. Number of Equivalent Domino Pairs
+
+## store first/last occurring index
+1124. Longest Well-Performing Interval
+
+## counter
+1347. Minimum Number of Steps to Make Two Strings Anagram
+350. Intersection of Two Arrays II
+1054. Distant Barcodes
+659. Split Array into Consecutive Subsequences
+916. Word Subsets
+36. Valid Sudoku
+1189. Maximum Number of Balloons
+594. Longest Harmonious Subsequence
+1002. Find Common Characters
+961. N-Repeated Element in Size 2N Array
+1160. Find Words That Can Be Formed by Characters
+
+# set
+290. Word Pattern
+205. Isomorphic Strings
+202. Happy Number
+349. Intersection of Two Arrays
+187. Repeated DNA Sequences
+939. Minimum Area Rectangle

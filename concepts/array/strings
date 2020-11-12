@@ -1,0 +1,23 @@
+# use built it slicing and functions to solve
+151. Reverse Words in a String
+678. Valid Parenthesis String
+680. Valid Palindrome II
+557. Reverse Words in a String III
+459. Repeated Substring Pattern
+709. To Lower Case
+151. Reverse Words in a String
+1324. Print Words Vertically
+1309. Decrypt String from Alphabet to Integer Mapping
+1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
+1446. Consecutive Characters
+1417. Reformat The String
+
+# special cases
+556. Next Greater Element III
+880. Decoded String at Index
+1573. Number of Ways to Split a String
+
+
+# keep track of count of chars/substrings
+926. Flip String to Monotone Increasing
+696. Count Binary Substrings

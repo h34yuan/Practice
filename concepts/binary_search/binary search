@@ -1,0 +1,21 @@
+
+# binary search of position index
+1337. The K Weakest Rows in a Matrix
+
+# binary search where start l/r base on given numerical values instead of index
+74. Search a 2d matrix
+1351. Count Negative Numbers in a Sorted Matrix
+240. Search a 2D Matrix II
+278. First Bad Version
+367. Valid Perfect Square
+
+## binary search with condition, start l/r base on numerical values rather than index
+875. Koko Eating Bananas
+1011. Capacity To Ship Packages Within D Days
+410. Split Array Largest Sum
+1283. Find the Smallest Divisor Given a Threshold
+1300. Sum of Mutated Array Closest to Target
+1552. Magnetic Force Between Two Balls
+
+# binary search with bisect
+1268. Search Suggestions System

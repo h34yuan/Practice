@@ -3,6 +3,7 @@
 120. Triangle
 740. Delete and Earn
 1043. Partition Array for Maximum Sum
+650. 2 Keys Keyboard
 
 ## kadane algorithm
 918. Maximum Sum Circular Subarray
@@ -37,9 +38,9 @@
 64. Minimum Path Sum
 85. Maximal Rectangle
 221. Maximal Square
-304. Range Sum Query 2D - Immutable
+304. Range Sum Query 2D - Immutable #TODO min/max path or distinct
 1277. Count Square Submatrices with All Ones
-1314. Matrix Block Sum
+1314. Matrix Block Sum #TODO min/max path or distinct
 931. Minimum Falling Path Sum
 
 
@@ -50,35 +51,35 @@
 91. Decode Ways
 96. Unique Binary Search Trees
 377. Combination Sum IV
-650. 2 Keys Keyboard
 673. Number of Longest Increasing Subsequence
-674. Longest Continuous Increasing Subsequence
+674. Longest Continuous Increasing Subsequence #TODO min/max or distinct
 1109. Corporate Flight Bookings
 746. Min Cost Climbing Stairs
 
 ## dp keep track of 2 dp. dp one is updated from second dp. or both dps depend on each other
 688. Knight Probability in Chessboard
-801. Minimum Swaps To Make Sequences Increasing
+801. Minimum Swaps To Make Sequences Increasing #TODO decisions?
 123. Best Time to Buy and Sell Stock III
 494. Target Sum
 1155. Number of Dice Rolls With Target Sum
-1186. Maximum Subarray Sum with One Deletion
+1186. Maximum Subarray Sum with One Deletion #TODO min/max or decision
 1567. Maximum Length of Subarray With Positive Product
 
 ## dp dict to store seen values/index and count
 873. Length of Longest Fibonacci Subsequence
 1027. Longest Arithmetic Subsequence
-368. Largest Divisible Subset
+368. Largest Divisible Subset #TODO
 467. Unique Substrings in Wraparound String
 
 # dp dfs memo. dp stores all previously seen combos or vals
 140. Word Break II
 698. Partition to K Equal Sum Subsets
 241. Different Ways to Add Parentheses
+638. Shopping Offers
 
 # dp keeps boolean or signs. dp is size of input or possible values.
 139. Word Break
-978. Longest Turbulent Subarray
+978. Longest Turbulent Subarray #TODO array question?
 647. Palindromic Substrings
 204. Count Primes
 
@@ -91,7 +92,7 @@
 198. House Robber
 264. Ugly Number II
 309. Best Time to Buy and Sell Stock with Cooldown
-343. Integer Break
+343. Integer Break #TODO
 357. Count Numbers with Unique Digits
 714. Best Time to Buy and Sell Stock with Transaction Fee
 1262. Greatest Sum Divisible by Three

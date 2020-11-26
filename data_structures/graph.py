@@ -61,7 +61,7 @@ def canFinish(self, numCourses, prerequisites):
         graph[x].append(y)
     # visit each node
     for i in range(numCourses):
-        if not self.dfs(graph, visited, i):
+        if not self.dfs_topological(graph, visited, i):
             return False
     return True
 

@@ -1,3 +1,4 @@
+# Math
 279. Perfect Squares
 476. Number Complement
 462. Minimum Moves to Equal Array Elements II
@@ -24,3 +25,12 @@
 # geometry
 1266. Minimum Time Visiting All Points
 1232. Check If It Is a Straight Line
+
+# bit manipulation
+201. Bitwise AND of Numbers Range
+1342. Number of Steps to Reduce a Number to Zero
+693. Binary Number with Alternating Bits
+1486. XOR Operation in an Array
+
+# bit masking
+1286. Iterator for Combination

@@ -1,2 +1,5 @@
+Queue is a data structure that uses a first in first out (FIFO) ordering as the first
+element added to the queue will also be the first item removed.
+
 # monotone queue
 239. Sliding Window Maximum

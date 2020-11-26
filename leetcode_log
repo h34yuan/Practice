@@ -537,7 +537,6 @@ return if all the buckets have the same val and if it doesn't, go back to the pr
 766. Toeplitz Matrix [array, check iterate m-1, n-1 and compare i, j with the i+1, j+1 element]
 # 08/11/20
 1497. Check If Array Pairs Are Divisible by k [dict to store the mods of each num, return false if k-i%k is not in dict]
-621. Task Scheduler TODO [look at problem again]
 # 09/11/20
 1470. Shuffle the Array
 950. Reveal Cards In Increasing Order [use queue to simulate process of final sorted nums. iterate the sorted nums x, use q to keep track of the pos in res for each x. on each iteration, take top:res[q.pop(0)] = x, put to bottom: q.append(q.pop(0)]
@@ -558,6 +557,45 @@ return if all the buckets have the same val and if it doesn't, go back to the pr
 1007. Minimum Domino Rotations For Equal Row [use Counter to count occurrence of each val in A and B and keep track of the num of same vals at index i. iterate 1-6 and a_count[x]+b_count[x]+same[x] > len(A) return the min diff between A and B]
 891. Sum of Subsequence Widths * [math, sort array, for each A[i], it is larger/smaller than i/n-1-i elements so A[i] is the max/min a total of 2^i/2^n-1-i times. return the sum of the diff between the max - min occurrences for each num]
 1636. Sort Array by Increasing Frequency [ counter, sort with lambda or heap ordering with (count(x), -x)]
+# 14/11/20
+1051. Height Checker
+769. Max Chunks To Make Sorted [iterate arr and keep track of cur max and whenever cur == i add to res since thats when we found the actual index of the cur max of the sequence so far. ALt: keep track of left_max, right_min and add when left_max[i] <= right_min[i+1]]
+768. Max Chunks To Make Sorted II * [similar to 769 but iterate arr and the sorted(arr) at the same time and keep a running sum s1, s2 for each. a chunk is seen when s1 == s2 since the both arr will have the same set of vals up to current iteration. dont have to worry about same sum with diff vals due to sorted ordering. if sum is 6 and first 2 in arr is [1,5] sorted(arr) cant be [3, 3] as [1] will be before it]
+830. Positions of Large Groups 
+# 15/11/20
+228. Summary Ranges [keep track of valid ranges by check if last range + 1 is cur num]
+1535. Find the Winner of an Array Game [one pass,keep track of cur max and the win count. if k isn't met after one pass, return max val since no other vals can beat it]
+1588. Sum of All Odd Length Subarrays
+532. K-diff Pairs in an Array [similar to 2sum, use counter and iterate keys, deal with same val equals k and different vals condition. can be solved with two pointer as well]
+# 16/11/20
+1162. As Far from Land as Possible [level order bfs. find all 1s and check surroundings and add index to q if 0 and set the 0s to 1 on grid. return the number of levels -1]
+605. Can Place Flowers [add placeholder 0 on each end. whenever i-1, i and i+1 are 0 set i element to 0 and add to count]
+# 18/11/20
+621. Task Scheduler * [greedy heapq, counter. store the count of each char in heapq. while q, keep popping the most frequent chars k=n+1 times (valid char seq before cooldown ends) and store in a temp list while decreasing the frequency of the popped values. if k!= 0 at the end of cooldown add it to res]
+# 19/11/20
+150. Evaluate Reverse Polish Notation [stack, iterate tokens and add to stack if int. if operator, pop last two in stack and evaluate and put in back into stack]
+126. Word Ladder II * [bfs backtrack similar to 127. but use a defeaultdict(list) to represent current layer/depth and stores k:v as last seq word: list of seq ending with the last word. iterate all the words in layer and bfs each char position and if new word is in wordlist add the word and seq to a new layer dict which replaces the prev layer at the end of each depth]
+1471. The k Strongest Values in an Array [two pointer]
+# 21/11/20
+289. Game of Life [store cell state with 2 bits, the right bit being the original state and the left being the new state. count ones with board[i][j] & 1 and right shift by 3 at the end.
+73. Set Matrix Zeroes TODO look at better solution
+1534. Count Good Triplets [brute force]
+1450. Number of Students Doing Homework at a Given Time
+1010. Pairs of Songs With Total Durations Divisible by 60 [use dict to store remainder, check for target difference]
+# 22/11/20
+138. Copy List with Random Pointer [iterate head to duplicate nodes and use dict to store head node and the duplicate node and on the second pass, set the random of the duplicate node from the dict]
+561. Array Partition I [return sum of all even indices for sorted nums]
+1566. Detect Pattern of Length M Repeated K or More Times
+# 24/11/20
+638. Shopping Offers * [dp top down memo. Find the default cost to meet the needs with the price. iterate each special and subtract it for each item in the input needs. update val if the reaminders are all >= 0 and check dp to get or dfs with the remainders + specials price. after update dp with the min cost for the current item config]
+935. Knight Dialer [dp, keep track of the count of current digit by adding the count of previous digits that can move to cur]
+64.r Minimum Path Sum
+# 25/11/20
+1227. Airplane Seat Assignment Probability * [https://leetcode.com/problems/airplane-seat-assignment-probability/discuss/411905/It's-not-obvious-to-me-at-all.-Foolproof-explanation-here!!!-And-proof-for-why-it's-12]
+1048. Longest String Chain [dp store max chain count ending at cur word. sort from longest and check if word with 1 char removed pred exists and update pred count]
+72. Edit Distance [dp strings, keep track of min ops between substrings s1[:i] and s2[:j]. initialize dp with n+1 and m+1 and set the 0th row and 0th column with index i, j]
+115. Distinct Subsequences [dp strings, 2d dp to keep track subsequences in s[:i] t[:j]. if chars are the same, take the sum of dp[i-1][j-1] + dp[i][j-1]]
+
 
 
 

@@ -1,8 +1,13 @@
 # Arrays
 The algorithm question's input is in the form of an array or matrix. Questions requires the traversal of the array
 to output some computation or to make modifications to the existing array based on the questions constraint.
+
 The generic array/matrix questions can be solved in one pass linear time where each element is check at least once.
+
 For each set of array questions, it can have properties of more than one sub pattern.
+
+## Generic array questions
+
 ```
 59. Spiral Matrix II
 849. Maximize Distance to Closest Person
@@ -36,6 +41,7 @@ For each set of array questions, it can have properties of more than one sub pat
 
 ## Iterate from both ends, 2 pass
 This subset of array questions requires two pass, starting at each end of the array
+
 ### Patterns to look for:
 - looking for different patterns of the array from each end (increasing from both ends)
 - finding some total in the array excluding the current index
@@ -47,6 +53,7 @@ This subset of array questions requires two pass, starting at each end of the ar
 ## sort array with condition
 This subset of array questions requires the sorting of the initial array based on some condition
 before solving. 
+
 ### Patterns to look for:
 - the order of the initial array is irrelevant and can be changed 
 - looking for differences/overlaps between elements
@@ -78,7 +85,17 @@ at the current index
 1414. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K
 ```
 
-# Hashmap to store values
+### Merge Intervals:
+For merge interval problems that gives a list of intervals, we will need to sort the intervals 
+by the start or the end depending on the question and check for overlaps. 
+(Problems can be under subset of greedy problems)
+```
+56. Merge Intervals
+435. Non-overlapping Intervals
+621. Task Scheduler [heapq]
+```
+
+## Hashmap to store values
 This subset of questions iterates the array and uses a dict or set to store seen values, indices or some other constraint
  to prevent visiting already seen values (related to hashmap question set).
 
@@ -95,13 +112,14 @@ This subset of questions iterates the array and uses a dict or set to store seen
 1380. Lucky Numbers in a Matrix
 ```
 
-# Non-tree bfs traversal
+## Non-tree bfs traversal
+TODO move to backtrack?
 Bfs pattern is applied on problems where the input can be an array of int/string or a matrix instead of a Tree.
 Bfs on tree and graph structures are explained on a separate page as this subset of questions focuses
 on bfs on arrays, integers, strings and matrices. 
 
 ### Patterns to look for:
-- question hints at finding all the nearest surrounding values first
+- question hints at finding all the nearest surrounding values first (shortest path)
 - input is a matrix and question asks for nearest or the adjacent values of the current cell
 - input is an (array of or just) an integer/string and asks to modify it to some target but can only 
 change a set amount of digits or characters each time.

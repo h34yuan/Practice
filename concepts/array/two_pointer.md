@@ -46,10 +46,11 @@ def two_pointer_position_template(nums: List[int], cond):
 283. Move Zeroes
 31. Next Permutation
 ```
-### Find subsets
+### Find subsets with a total equal to some target
 ```
 923. 3Sum With Multiplicity
 167. Two Sum II - Input array is sorted
+532. K-diff Pairs in an Array
 15. 3Sum
 18. 4Sum
 1498. Number of Subsequences That Satisfy the Given Sum Condition
